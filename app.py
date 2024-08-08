@@ -179,7 +179,12 @@ def recommend(movie, movies_data):
 movies_data = pickle.load(open("movies_data.pkl", "rb"))
 similarity = pickle.load(open("similarity.pkl", "rb"))
 
-st.title(":rainbow[Movie Recommendation System] 🎀")
+st.markdown(
+    """
+    <h1 style='color: deeppink;'>🎀 Movie Recommendation System 🎀</h1>
+    """, 
+    unsafe_allow_html=True
+)
 
 selected_movie = st.selectbox(
     'Choose Movie',
